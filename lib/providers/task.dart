@@ -21,6 +21,7 @@ class Task {
 }
 
 class TaskProvider with ChangeNotifier {
+  bool isLoading = true;
   List<Task> get itemsList {
     return _toDoList;
   }
@@ -68,5 +69,15 @@ class TaskProvider with ChangeNotifier {
   void changeStatus(String id) {
     int index = _toDoList.indexWhere((task) => task.id == id);
     _toDoList[index].isDone = !_toDoList[index].isDone;
+    notifyListeners();
+  }
+
+  void setLoader(bool isloading) {
+    this.isLoading = isloading;
+    notifyListeners();
+  }
+
+  getLoader() {
+    return isLoading;
   }
 }

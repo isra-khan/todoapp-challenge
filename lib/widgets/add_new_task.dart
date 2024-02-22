@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
+import 'package:todoapp/constant/colors.dart';
 
 import '../providers/task.dart';
 
@@ -161,7 +162,7 @@ class _AddNewTaskState extends State<AddNewTask> {
                 child: Text(
                   widget.isEditMode == false ? 'ADD TASK' : 'EDIT TASK',
                   style: TextStyle(
-                      color: const Color.fromARGB(255, 165, 38, 187),
+                      color: purpleColor,
                       fontFamily: 'Lato',
                       fontSize: 18,
                       fontWeight: FontWeight.bold),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:todoapp/constant/colors.dart';
 
 class ItemText extends StatelessWidget {
   final bool check;
@@ -25,7 +26,7 @@ class ItemText extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
                 fontSize: 22,
-                color: Colors.grey,
+                color: greyColor,
                 decoration: TextDecoration.lineThrough),
           ),
           _buildDateTimeTexts(context),

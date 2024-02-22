@@ -10,6 +10,8 @@ class List extends StatelessWidget {
     final taskList = Provider.of<TaskProvider>(context).itemsList;
     return taskList.length > 0
         ? ListView.builder(
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width * 0.02),
             itemCount: taskList.length,
             itemBuilder: (context, index) {
               return ListItem(taskList[index]);
@@ -24,8 +26,8 @@ class List extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       height: constraints.maxHeight * 0.5,
-                      child: Image.asset('assets/images/waiting.png',
-                          fit: BoxFit.cover),
+                      child:
+                          Image.asset('assets/no-data.png', fit: BoxFit.cover),
                     ),
                     SizedBox(
                       height: 30,

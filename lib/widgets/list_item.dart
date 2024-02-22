@@ -18,10 +18,10 @@ class _ListItemState extends State<ListItem> {
   @override
   Widget build(BuildContext context) {
     void _checkItem() {
-      setState(() {
-        Provider.of<TaskProvider>(context, listen: false)
-            .changeStatus(widget.task.id!);
-      });
+      //   setState(() {
+      Provider.of<TaskProvider>(context, listen: false)
+          .changeStatus(widget.task.id!);
+      //  });
     }
 
     return Dismissible(
